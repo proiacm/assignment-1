@@ -1,7 +1,7 @@
 import React from 'react'
 import './UserOutput.css'
 
-function UserOutput(props) {
+const UserOutput = (props) => {
     return (
         <div className='Output'>
             <p onClick={props.click}>

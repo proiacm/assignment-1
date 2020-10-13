@@ -1,7 +1,7 @@
 import React from 'react'
 
-function UserInput(props) {
-    
+const UserInput = (props) => {
+
     const style = {
         background: 'pink'
       }
