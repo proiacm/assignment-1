@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import UserOutput from './User/UserOutput';
+import UserInput from './User/UserInput';
 
 class App extends Component {
 
@@ -8,10 +9,18 @@ class App extends Component {
     username: 'marzbarz'
   }
 
+  upcaseUsernameHandler = (event) => {
+    this.setState({
+      username: event.target.value
+    })
+  }
+
   render() {
+
     return (
       <div>
-        <UserOutput username={this.state.username} />
+        <UserInput username={this.state.username} change={this.upcaseUsernameHandler}/>
+        <UserOutput click={this.upcaseUsernameHandler} username={this.state.username} />
         <UserOutput username={this.state.username} />
         <UserOutput username={this.state.username} />
       </div>

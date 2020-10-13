@@ -1,9 +1,14 @@
 import React from 'react'
 
-function UserInput() {
+function UserInput(props) {
+    
+    const style = {
+        background: 'pink'
+      }
+
     return (
         <div>
-            <input type='text' />
+            <input style={style} type='text' onChange={props.change} value={props.username}/>
         </div>
     )
 }
