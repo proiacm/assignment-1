@@ -9,7 +9,7 @@ class App extends Component {
     username: 'marzbarz'
   }
 
-  upcaseUsernameHandler = (event) => {
+  changeUsernameHandler = (event) => {
     this.setState({
       username: event.target.value
     })
@@ -19,8 +19,8 @@ class App extends Component {
 
     return (
       <div>
-        <UserInput username={this.state.username} change={this.upcaseUsernameHandler}/>
-        <UserOutput click={this.upcaseUsernameHandler} username={this.state.username} />
+        <UserInput username={this.state.username} change={this.changeUsernameHandler}/>
+        <UserOutput username={this.state.username} />
         <UserOutput username={this.state.username} />
         <UserOutput username={this.state.username} />
       </div>
